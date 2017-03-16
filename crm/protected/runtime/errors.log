@@ -1,0 +1,156 @@
+2017/02/22 22:05:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/bbrokers/avir/crm/protected/components/CommonControllerBehavior.php:97
+Stack trace:
+#0 /home/bbrokers/avir/crm/protected/components/CommonControllerBehavior.php(164): CommonControllerBehavior->getModel('435')
+#1 [internal function]: CommonControllerBehavior->loadModel('435')
+#2 /home/bbrokers/avir/crm/framework/base/CComponent.php(261): call_user_func_array(Array, Array)
+#3 /home/bbrokers/avir/crm/protected/modules/contacts/controllers/ContactsController.php(147): CComponent->__call('loadModel', Array)
+#4 /home/bbrokers/avir/crm/protected/modules/contacts/controllers/ContactsController.php(147): ContactsController->loadModel('435')
+#5 [internal function]: ContactsController->actionView('435')
+#6 /home/bbrokers/avir/crm/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(ContactsController), Array)
+#7 /home/bbrokers/avir/crm/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ContactsController), Object(ReflectionMethod), Array)
+#8 /home/bbrokers/avir/crm/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1106): CFilterChain->run()
+#11 /home/bbrokers/avir/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#12 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#15 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#17 /home/bbrokers/avir/crm/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/bbrokers/avir/crm/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(282): CController->run('view')
+#20 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('contacts/contac...')
+#21 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#22 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#23 {main}
+REQUEST_URI=/crm/index.php/contacts/id/435
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/site/login
+---
+2017/02/26 14:22:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/bbrokers/avir/crm/protected/components/FlowDesignerAction.php:134
+Stack trace:
+#0 /home/bbrokers/avir/crm/protected/components/FlowDesignerAction.php(36): FlowDesignerAction->loadModel('15')
+#1 [internal function]: FlowDesignerAction->run(NULL)
+#2 /home/bbrokers/avir/crm/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(FlowDesignerAction), Array)
+#3 /home/bbrokers/avir/crm/framework/web/actions/CAction.php(74): CAction->runWithParamsInternal(Object(FlowDesignerAction), Object(ReflectionMethod), Array)
+#4 /home/bbrokers/avir/crm/framework/web/CController.php(308): CAction->runWithParams(Array)
+#5 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(FlowDesignerAction))
+#6 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1106): CFilterChain->run()
+#7 /home/bbrokers/avir/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#8 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/bbrokers/avir/crm/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/bbrokers/avir/crm/framework/web/CController.php(265): CController->runActionWithFilters(Object(FlowDesignerAction), Array)
+#11 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(282): CController->run('flowDesigner')
+#12 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('studio/flowDesi...')
+#13 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#15 {main}
+REQUEST_URI=/crm/index.php/studio/flowDesigner/15
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/studio/flowIndex
+---
+2017/03/01 16:30:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.lastUpdated' in 'order clause'' in /home/bbrokers/avir/crm/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/bbrokers/avir/crm/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/bbrokers/avir/crm/protected/models/X2Model.php(3335): CDbCommand->queryAll()
+#2 /home/bbrokers/avir/crm/protected/models/X2Model.php(3301): X2Model->query(Object(CDbCriteria), true, false)
+#3 /home/bbrokers/avir/crm/protected/components/SmartActiveDataProvider.php(172): X2Model->findAll(Object(CDbCriteria))
+#4 /home/bbrokers/avir/crm/framework/web/CDataProvider.php(168): SmartActiveDataProvider->fetchData()
+#5 /home/bbrokers/avir/crm/protected/components/SmartActiveDataProvider.php(243): CDataProvider->getData(false)
+#6 /home/bbrokers/avir/crm/framework/zii/widgets/CBaseListView.php(125): SmartActiveDataProvider->getData()
+#7 /home/bbrokers/avir/crm/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#8 /home/bbrokers/avir/crm/protected/components/X2GridView/X2GridViewBase.php(510): CGridView->init()
+#9 /home/bbrokers/avir/crm/protected/components/X2GridView.php(251): X2GridViewBase->init()
+#10 /home/bbrokers/avir/crm/framework/web/CBaseController.php(147): X2GridView->init()
+#11 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1353): CBaseController->createWidget('X2GridView', Array)
+#12 /home/bbrokers/avir/crm/protected/modules/portfolioMedia/views/portfolioMedia/index.php(121): x2base->widget('X2GridView', Array)
+#13 /home/bbrokers/avir/crm/framework/web/CBaseController.php(126): require('/home/bbrokers/...')
+#14 /home/bbrokers/avir/crm/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/bbrokers/...', Array, true)
+#15 /home/bbrokers/avir/crm/framework/web/CController.php(869): CBaseController->renderFile('/home/bbrokers/...', Array, true)
+#16 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1264): CController->renderPartial('index', Array, true)
+#17 /home/bbrokers/avir/crm/protected/modules/portfolioMedia/controllers/PortfolioMediaController.php(198): x2base->render('index', Array)
+#18 /home/bbrokers/avir/crm/framework/web/actions/CInlineAction.php(49): PortfolioMediaController->actionIndex()
+#19 /home/bbrokers/avir/crm/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1106): CFilterChain->run()
+#22 /home/bbrokers/avir/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#23 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#25 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#26 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#27 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#28 /home/bbrokers/avir/crm/framework/web/CController.php(291): CFilterChain->run()
+#29 /home/bbrokers/avir/crm/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(282): CController->run('index')
+#31 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolioMedia/...')
+#32 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#33 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#34 {main}
+REQUEST_URI=/crm/index.php/portfolioMedia/index
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/profile/22
+---
+2017/03/15 11:56:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "crm/index.php/contacts/lists".' in /home/bbrokers/avir/crm/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('crm/index.php/c...')
+#1 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/crm/index.php/crm/index.php/contacts/lists
+---
+2017/03/15 13:01:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contacts/id/subscribe".' in /home/bbrokers/avir/crm/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('contacts/id/sub...')
+#1 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/crm/index.php/contacts/id/subscribe
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/contacts/id/161
+---
+2017/03/15 13:01:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contacts/id/subscribe".' in /home/bbrokers/avir/crm/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('contacts/id/sub...')
+#1 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#3 {main}
+REQUEST_URI=/crm/index.php/contacts/id/subscribe
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/contacts/id/161
+---
+2017/03/16 09:31:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.lastUpdated' in 'order clause'' in /home/bbrokers/avir/crm/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/bbrokers/avir/crm/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/bbrokers/avir/crm/protected/models/X2Model.php(3335): CDbCommand->queryAll()
+#2 /home/bbrokers/avir/crm/protected/models/X2Model.php(3301): X2Model->query(Object(CDbCriteria), true, false)
+#3 /home/bbrokers/avir/crm/protected/components/SmartActiveDataProvider.php(172): X2Model->findAll(Object(CDbCriteria))
+#4 /home/bbrokers/avir/crm/framework/web/CDataProvider.php(168): SmartActiveDataProvider->fetchData()
+#5 /home/bbrokers/avir/crm/protected/components/SmartActiveDataProvider.php(243): CDataProvider->getData(false)
+#6 /home/bbrokers/avir/crm/framework/zii/widgets/CBaseListView.php(125): SmartActiveDataProvider->getData()
+#7 /home/bbrokers/avir/crm/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#8 /home/bbrokers/avir/crm/protected/components/X2GridView/X2GridViewBase.php(510): CGridView->init()
+#9 /home/bbrokers/avir/crm/protected/components/X2GridView.php(251): X2GridViewBase->init()
+#10 /home/bbrokers/avir/crm/framework/web/CBaseController.php(147): X2GridView->init()
+#11 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1353): CBaseController->createWidget('X2GridView', Array)
+#12 /home/bbrokers/avir/crm/protected/modules/portfolioMedia/views/portfolioMedia/index.php(121): x2base->widget('X2GridView', Array)
+#13 /home/bbrokers/avir/crm/framework/web/CBaseController.php(126): require('/home/bbrokers/...')
+#14 /home/bbrokers/avir/crm/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/bbrokers/...', Array, true)
+#15 /home/bbrokers/avir/crm/framework/web/CController.php(869): CBaseController->renderFile('/home/bbrokers/...', Array, true)
+#16 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1264): CController->renderPartial('index', Array, true)
+#17 /home/bbrokers/avir/crm/protected/modules/portfolioMedia/controllers/PortfolioMediaController.php(198): x2base->render('index', Array)
+#18 /home/bbrokers/avir/crm/framework/web/actions/CInlineAction.php(49): PortfolioMediaController->actionIndex()
+#19 /home/bbrokers/avir/crm/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /home/bbrokers/avir/crm/protected/controllers/x2base.php(1106): CFilterChain->run()
+#22 /home/bbrokers/avir/crm/framework/web/filters/CInlineFilter.php(58): x2base->filterSetPortlets(Object(CFilterChain))
+#23 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#25 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#26 /home/bbrokers/avir/crm/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#27 /home/bbrokers/avir/crm/framework/web/filters/CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#28 /home/bbrokers/avir/crm/framework/web/CController.php(291): CFilterChain->run()
+#29 /home/bbrokers/avir/crm/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(282): CController->run('index')
+#31 /home/bbrokers/avir/crm/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolioMedia/...')
+#32 /home/bbrokers/avir/crm/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#33 /home/bbrokers/avir/crm/index.php(40): CApplication->run()
+#34 {main}
+REQUEST_URI=/crm/index.php/portfolioMedia/index
+HTTP_REFERER=http://avir.businessbrokerscrm.com/crm/index.php/profile/22
+---

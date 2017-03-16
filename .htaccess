@@ -1,0 +1,68 @@
+<ifModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+  mod_gzip_item_exclude mime ^image/.* 
+  mod_gzip_item_include handler ^cgi-script$
+</ifModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+Order deny,allow
+#postlogban
+deny from 84.16.241.100 #TOR node#2016-12-14-20.00
+deny from 185.117.215.9 #TOR node#2016-12-09-22.59
+deny from 46.165.230.5 #TOR node#2016-12-09-22.47
+deny from 213.109.53.16 #TOR node#2016-12-02-22.53
+deny from 185.72.244.24 #TOR node#2016-12-02-22.10
+deny from 138.201.40.83 #TOR node#2016-12-02-22.01
+deny from 87.118.122.50 #TOR node#2016-11-07-23.09
+deny from 84.200.56.36 #TOR node#2016-11-07-21.41
+deny from 5.19.237.138 #TOR node#2016-11-01-09.44
+deny from 193.111.136.162 #TOR node#2016-11-01-05.24
+deny from 88.198.14.171 #TOR node#2016-11-01-04.08
+deny from 62.141.55.117 #TOR node#2016-11-01-03.17
+deny from 188.120.231.199 #TOR node#2016-11-01-03.17
+deny from 88.198.110.130 #TOR node#2016-11-01-02.22
+deny from 31.17.188.221 #TOR node#2016-11-01-02.02
+deny from 46.165.223.217 #TOR node#2016-10-31-22.50
+deny from 31.185.104.19 #TOR node#2016-10-31-22.43
+deny from 139.162.144.133 #TOR node#2016-10-31-22.42
+deny from 84.200.122.104 #TOR node#2016-10-31-21.20
+deny from 94.26.140.150 #TOR node#2016-10-31-21.10
+deny from 94.242.57.161 #TOR node#2016-10-31-21.02
+deny from 212.83.40.238 #TOR node#2016-10-31-20.54
+deny from 217.13.197.5 #TOR node#2016-10-31-20.53
+deny from 95.213.204.91 #TOR node#2016-10-31-20.51
+deny from 212.21.66.6 #TOR node#2016-10-31-20.48
+deny from 92.222.6.12 #TOR node#2016-10-31-20.39
+deny from 87.118.116.90 #TOR node#2016-10-31-20.36
+deny from 138.201.30.228 #TOR node#2016-10-31-20.36
+deny from 46.38.56.213 #TOR node#2016-10-31-20.01
+deny from 5.189.146.133 #TOR node#2016-10-31-19.53
+deny from 212.83.40.239 #TOR node#2016-10-31-19.52
+deny from 212.109.217.131 #TOR node#2016-10-31-19.52
+deny from 85.143.95.50 #TOR node#2016-10-31-19.40
+deny from 85.25.103.119 #TOR node#2016-10-31-18.41
+deny from 82.211.19.143 #TOR node#2016-10-31-18.38
+deny from 85.90.244.23 #TOR node#2016-10-31-18.38
+deny from 85.143.210.233 #TOR node#2016-10-31-18.32
+deny from 188.100.150.207 #TOR node#2016-10-31-18.29
+deny from 85.143.213.44 #TOR node#2016-10-31-18.04
+deny from 185.22.173.89 #TOR node#2016-10-31-16.36
+deny from 93.100.211.216 #TOR node#2016-10-31-16.36
+deny from 46.188.10.23 #TOR node#2016-10-31-16.35
+deny from 213.202.252.149 #TOR node#2016-10-31-16.35
